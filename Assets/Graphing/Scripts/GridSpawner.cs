@@ -7,6 +7,10 @@ public class GridSpawner : MonoBehaviour
     public GameObject gridPrefab;
     public Camera cam;
 
+    public float precision = 1f;
+
+    public TogglesController togglesController;
+
     List<Vector2> gridsSpawned;
     List<Vector2> gridsStandby;
 
@@ -76,6 +80,9 @@ public class GridSpawner : MonoBehaviour
 
                     if (gridsStandby[i].x != 0)
                         go.GetComponent<Grid>().hideY = true;
+
+                    go.GetComponent<Grid>().precision = precision;
+                    go.GetComponent<Grid>().toggleController = togglesController;
 
                     gridsSpawned.Add(gridsStandby[i]);
                 }
