@@ -1,2 +1,2 @@
 # Graphing
- Simple math graphing calculator made with Unity
+WIP math equation visualizer made in Unity
